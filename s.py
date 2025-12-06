@@ -237,7 +237,7 @@ def display_happy_birthday_party(name, word_dict, delay=2):
             sys.stdout.write('\033[1;0H')
             
             happy_birthday = "🎉🎂 Bonne Fête! 🎂🎉"
-            padding = 23#max(0, (total_word_area_width - len(happy_birthday)) // 2)
+            padding = 39#max(0, (total_word_area_width - len(happy_birthday)) // 2)
             sys.stdout.write(' ' * padding)
             
             hb_colors = ['neon_yellow', 'neon_pink', 'neon_cyan', 'neon_green', 'neon_blue']
@@ -259,7 +259,7 @@ def display_happy_birthday_party(name, word_dict, delay=2):
             else:
                 left_emoji = right_emoji = "   "
             
-            sys.stdout.write(f"                 {safe_get_color('neon_yellow')}{left_emoji}{COLORS['reset']}   ")
+            sys.stdout.write(f"                                 {safe_get_color('neon_yellow')}{left_emoji}{COLORS['reset']}   ")
             
             for idx, char in enumerate(text):
                 color_idx = (color_shift + idx) % len(current_palette)
